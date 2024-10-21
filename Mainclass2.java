@@ -1,23 +1,12 @@
-package mycoding;
-class Alpha{
-	Alpha(){
-		System.out.println("Alpha() Constructor");
-	}
-	Alpha(int a){
-		System.out.println("Alpha(int) Constructor");
-	}
-}
-class Beta extends Alpha
-{
-	Beta(){
-		super(10);
-		System.out.println("Beta() Constructor");
-	}
-}
+package com.jspiders.upcasting;
 
 public class Mainclass2 {
 	public static void main(String[] args) {
-		Beta b=new Beta();
+		Apple a=new Apple();
+		Banana b=new Banana();
+		Mango m=new Mango();
+		BigBasket.addToBasket(m);
+		BigBasket.addToBasket(b);
+		BigBasket.addToBasket(a);
 	}
-
 }

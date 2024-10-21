@@ -1,20 +1,12 @@
-package mycoding;
-class Demo{
-	Demo(){
-		System.out.println("Demo() Constructor");
-	}
-}
-class Sample extends Demo{
-	Sample(){
-		super();
-		System.out.println("Sample() Constructor");
-	}
-	
-}
+package com.jspiders.upcasting;
 
 public class Mainclass1 {
-	public static void main(String[] args) {
-		Sample s1=new Sample();
+	public static void main(String[]args) {
+		Mobile mob=new Mobile();
+		Television tv=new Television();
+		Flipcart.addToCart(tv);
+		Flipcart.addToCart(mob);
+		
 	}
-}
 
+}
