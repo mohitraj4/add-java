@@ -1,20 +1,20 @@
-package mycoding;
-
-class Amazon {
-	Amazon(){
-	System.out.println("Initialization for Shopping");
+package com.jspider.downcasting;
+class Demo
+{
+	
 }
-Amazon(double fees){
-	this();
-	System.out.println("Initialization for Prime Video");
-	System.out.println("Initialization for Prime Music");
-}
+class Sample extends Demo
+{
+	
 }
 
 public class Mainclass {
-	public static void main(String[] args) {
-		Amazon s1=new Amazon(3.9);
+	public static void main(String[]args)
+	{
+		Demo ref=new Sample();
+		Sample obj=(Sample)ref;//DOWNCASTING : demo--->Sample
+		System.out.println(ref);
+		System.out.println(obj);
 	}
-	
 
 }

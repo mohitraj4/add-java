@@ -1,6 +1,6 @@
 package com.jspider.downcasting;
 
-class SoftwareEngineer{
+public class SoftwareEngineer {
 	void meeting() {
 		System.out.println("Meeting....");
 		
@@ -17,10 +17,3 @@ class Tester extends SoftwareEngineer{
 	}
 }
 
-public class Mainclass3 {
-	public static void main(String[] args) {
-	SoftwareEngineer ref=new Developer;
-	ref 
-	}
-
-}
