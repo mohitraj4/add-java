@@ -1,21 +1,26 @@
-package com.jspiders.upcasting;
-
-class Delta{
-	void run() {
-	System.out.println("Executing run()....");
+package com.jspider.overriding;
+class Parent{
+	void watchTv() {
+		System.out.println("News/Serial");
 	}
 }
-class Example extends Delta{
-	void send() {
-		System.out.println("Executing send()...");
+class child extends Parent{
+	
+	void watchTv() {
+		System.out.println("Sports/Movies");
 	}
 }
 
 public class Main {
-	public static void main(String[]args)
-	{
-		Delta ref=new Example();//UPCASTING : Example----> Delta
-		ref.run();
+	public static void main(String[] args) {
+		Parent p=new Parent();
+		p.watchTv();
+		
+		child  c=new child();
+		c.watchTv();
+		
+		Parent ref=new child();
+		ref.watchTv();
 	}
 
 }
