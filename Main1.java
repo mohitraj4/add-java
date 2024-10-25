@@ -1,22 +1,26 @@
-package com.jspider.overriding;
-class Demo{
-	void play() {
-		System.out.println("Cricket/Football");
+package com.jspider.hasa;
+
+import mycoding.main;
+
+class Engine{
+	void power() {
+		System.out.println("Engine Provides Power");
 	}
 }
-class Sample extends Demo{
-	void play() {
-		System.out.println("Pubg/Cod");
+class Driver{
+	void drive() {
+		System.out.println("Driver is Driving");
 	}
 }
+class Car{
+	Engine eng=new Engine();//COMPOSITION
+	Driver ref=new Driver();//AGGREGATION
+}
+
 public class Main1 {
 	public static void main(String[] args) {
-		Demo d=new Demo();
-		d.play();
-		Sample s=new Sample();
-		s.play();
-		Demo obj=new Sample();
-		obj.play();
+		Car c=new Car();
+		c.eng.power();
+		c.ref.drive();
 	}
-
 }

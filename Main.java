@@ -1,26 +1,17 @@
-package com.jspider.overriding;
-class Parent{
-	void watchTv() {
-		System.out.println("News/Serial");
+package com.jspider.hasa;
+class Demo{
+	void test() {
+		System.out.println("Executing test()...");
 	}
 }
-class child extends Parent{
-	
-	void watchTv() {
-		System.out.println("Sports/Movies");
-	}
+class Sample{
+	Demo d=new Demo();
 }
 
 public class Main {
 	public static void main(String[] args) {
-		Parent p=new Parent();
-		p.watchTv();
-		
-		child  c=new child();
-		c.watchTv();
-		
-		Parent ref=new child();
-		ref.watchTv();
+		Sample s=new Sample();
+		s.d.test();
 	}
 
 }

@@ -1,26 +1,25 @@
-package com.jspider.overriding;
-
-import mycoding.main;
-
-class FacebookOld{
-	void reaction() {
-		System.out.println("Like");
+package com.jspider.hasa;
+class Departement{
+	void test() {
+		System.out.println("College has a Department");
 		
 	}
 }
-class FacebookNew extends FacebookOld{
-	void reaction() {
-		System.out.println("Like WoW Love Sad HaHa");
+class Teacher{
+	void teach() {
+		System.out.println("Teacher teachs in the class");
 	}
 }
+class College{
+	Departement d=new Departement();
+	Teacher t=new Teacher();
+}
+
 
 public class Main2 {
 	public static void main(String[] args) {
-		FacebookOld fbOld=new FacebookOld();
-		fbOld.reaction();
-		FacebookNew fbNew=new FacebookNew();
-		fbNew.reaction();
-		FacebookOld fb=new FacebookNew();
-		fb.reaction();
+		College col=new College();
+		col.d.test();
+		col.t.teach();
 	}
 }

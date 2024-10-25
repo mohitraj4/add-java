@@ -1,32 +1,24 @@
-package com.jspider.overriding;
-class Whatsapp1{
-	void deliveryReport() {
-		System.out.println("Sent");
+package com.jspider.hasa;
+class Camera{
+	void takePhoto() {
+		System.out.println("Mobile has a Camera");
 	}
 }
-class Whatsapp2 extends Whatsapp1{
-	void deliveryReport() {
-		System.out.println("Delivery");
+class SimCard{
+	void networkService() {
+		System.out.println("Mobile has a Simcard ");
 	}
 }
-class Whatsapp3 extends Whatsapp2{
-	void deliveryReport() {
-		System.out.println("Seen");
-	}
+class Mobile{
+	Camera c=new Camera();
+	SimCard sim=new SimCard();
 }
 
 public class Main3 {
 	public static void main(String[] args) {
-		Whatsapp1 ref1=new Whatsapp1();
-		ref1.deliveryReport();
-		Whatsapp2 ref2=new Whatsapp2();
-		ref2.deliveryReport();
-		Whatsapp3 ref3=new Whatsapp3();
-		ref3.deliveryReport();
-		Whatsapp1 ref=new Whatsapp3();
-		ref.deliveryReport();
-		
-		
+		Mobile mob=new Mobile();
+		mob.c.takePhoto();
+		mob.sim.networkService();
 	}
 
 }
